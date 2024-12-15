@@ -25,7 +25,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            Hi, I'm{' '}
+            Hi, I&#39;m{' '}
             <span className="text-blue-400">
               Charles Milton
             </span>

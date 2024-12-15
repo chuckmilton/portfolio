@@ -1,9 +1,9 @@
 'use client';
-// @ts-ignore
+// @ts-expect-error
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { motion } from 'framer-motion';
-import { FaLaptopCode, FaBriefcase } from 'react-icons/fa';
+import { FaLaptopCode } from 'react-icons/fa';
 import { MdWork, MdEngineering } from 'react-icons/md';
 import Image from 'next/image';
 
