@@ -38,7 +38,10 @@ export default function Navbar() {
               src="/videos/cm-logo.mp4" // Replace with the path to your MP4
               autoPlay
               muted
+              playsInline
+              preload="auto"
               onEnded={handleVideoEnd}
+              onError={() => setShowVideo(false)}
               className="w-12 h-12"
             />
           ) : (
