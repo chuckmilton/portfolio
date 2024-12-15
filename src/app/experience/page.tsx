@@ -1,5 +1,5 @@
 'use client';
-// @ts-expect-error
+// @ts-expect-error: VerticalTimeline type mismatch, safe to ignore for now
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { motion } from 'framer-motion';
