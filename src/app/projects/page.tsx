@@ -40,7 +40,7 @@ export default function Projects() {
     },
     {
         title: 'AR Cooking Simulator',
-        description: 'Led the development an interactive augmented reality (AR) cooking game with recipe management, scoring systems, and virtual kitchen tools. Enhanced user engagement with intuitive AR mechanics and visual cues.',
+        description: 'Led the development of an interactive augmented reality (AR) cooking game with recipe management, scoring systems, and virtual kitchen tools. Enhanced user engagement with intuitive AR mechanics and visual cues.',
         tools: ['Unity', 'C#', 'AR Foundation', 'XR Interaction Toolkit'],
         image: '/images/arcooking.png',
         demo: 'https://www.xrengineering.club/projects',
