@@ -10,18 +10,6 @@ import Image from 'next/image';
 export default function Experience() {
     const experiences = [
       {
-        company: 'DreamWay Media',
-        logo: '/logos/dreamway.png',
-        role: 'Web Application Development Intern',
-        duration: 'Sept 2024 - Present',
-        description: [
-          'Assist in building and maintaining e-commerce dynamic websites using PHP, React, and modern web technologies.',
-          'Optimize platforms for speed, SEO, and user experience.',
-        ],
-        icon: <FaLaptopCode />,
-        iconColor: '#60A5FA',
-      },
-      {
         company: 'Association for Computing Machinery',
         logo: '/logos/acm.png',
         role: 'Web Developer',
@@ -44,6 +32,18 @@ export default function Experience() {
         ],
         icon: <MdEngineering />,
         iconColor: '#FBBF24',
+      },
+      {
+        company: 'DreamWay Media',
+        logo: '/logos/dreamway.png',
+        role: 'Web Application Development Intern',
+        duration: 'Sept 2024 - Dec 2024',
+        description: [
+          'Assist in building and maintaining e-commerce dynamic websites using PHP, React, and modern web technologies.',
+          'Optimize platforms for speed, SEO, and user experience.',
+        ],
+        icon: <FaLaptopCode />,
+        iconColor: '#60A5FA',
       },
     ];
   
