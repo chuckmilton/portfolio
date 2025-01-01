@@ -39,8 +39,8 @@ export default function Experience() {
         role: 'Web Application Development Intern',
         duration: 'Sept 2024 - Dec 2024',
         description: [
-          'Assist in building and maintaining e-commerce dynamic websites using PHP, React, and modern web technologies.',
-          'Optimize platforms for speed, SEO, and user experience.',
+          'Assisted in building and maintaining e-commerce dynamic websites using PHP, React, and other modern web technologies.',
+          'Optimized platforms for speed, SEO, and user experience.',
         ],
         icon: <FaLaptopCode />,
         iconColor: '#60A5FA',
