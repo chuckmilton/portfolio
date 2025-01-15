@@ -4,6 +4,15 @@ import { motion } from 'framer-motion';
 export default function Projects() {
   const projects = [
     {
+      title: "ACM at CSULB's Official Website",
+      description:
+        'Designed and developed a responsive website for the Association for Computing Machinery (ACM) at CSULB, showcasing events, projects, blogs, and resources for 200+ members.',
+      tools: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      image: '/images/acm-website.png',
+      demo: 'https://acm-website-2024-two.vercel.app/',
+      code: 'https://github.com/chuckmilton/acm-website-2024',
+    },
+    {
       title: 'Rate My CSULB Professors',
       description:
         'Engineered a Chrome extension that integrates professor ratings into CSULB’s registration system, reducing query latency by 50% using GraphQL and LRU caching.',
