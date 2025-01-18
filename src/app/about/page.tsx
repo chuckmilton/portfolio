@@ -52,8 +52,8 @@ export default function About() {
   ];
 
   return (
-      <div className="relative min-h-screen flex items-center bg-gray-900 text-white overflow-hidden">
-        {/* Animated Background */}
+    // 1) Removed "flex flex-col" on the top-level container
+    <div className="relative min-h-screen bg-gray-900 text-white overflow-hidden">
       {/* Animated Background */}
       <motion.div
         className="absolute top-0 left-0 w-full h-full"
@@ -65,72 +65,77 @@ export default function About() {
         <div className="absolute w-72 h-72 bg-teal-400 opacity-20 rounded-full -bottom-12 -right-16 blur-3xl"></div>
       </motion.div>
 
-      {/* About Content */}
-      <div className="container mx-auto py-12 px-6 flex flex-col lg:flex-row items-center gap-12 relative mt-16">
-        {/* Left Section: Profile Picture */}
-        <motion.div
-          className="w-full lg:w-1/3 flex justify-center"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: 'easeInOut' }}
-        >
-          <img
-            src="/images/profile.jpg"
-            alt="Charles Milton"
-            className="w-64 h-64 rounded-full md:rounded-full shadow-lg object-cover md:w-60 md:h-60 lg:w-full lg:h-full lg:rounded-lg"
-          />
-        </motion.div>
-
-        {/* Right Section: About Content */}
-        <motion.div
-          className="w-full lg:w-2/3"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: 'easeInOut' }}
-        >
-          <h2 className="text-5xl font-bold mb-6 text-blue-400 text-center lg:text-left">About Me</h2>
-          <p className="text-gray-300 leading-relaxed mb-6 text-lg">
-            Hello! I’m <span className="text-blue-300 font-semibold">Charles Milton</span>, a passionate{' '}
-            <span className="text-teal-300 font-semibold">Computer Science student</span> with a focus on building
-            innovative <span className="text-blue-400">AI-driven solutions</span> and
-            <span className="text-red-400"> modern web applications</span>.
-          </p>
-
-          <p className="text-gray-400 mb-8 text-lg">
-            I enjoy combining creativity with technology to solve real-world problems. My current focus
-            is on <span className="text-yellow-400">Machine Learning</span>,
-            <span className="text-green-400"> Software Development</span>, and building
-            dynamic applications that have a positive impact.
-          </p>
-
-          {/* Skills Section */}
+      {/* About Content Container */}
+      <div className="container mx-auto py-12 px-6 mt-16">
+        {/* 2) About Section Row: flex-col on mobile, flex-row on large screens */}
+        <div className="flex flex-col lg:flex-row items-center gap-12 relative">
+          {/* Left: Profile Picture */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            className="w-full lg:w-1/3 flex justify-center"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8"
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
           >
-            <h3 className="text-2xl font-bold text-gray-200 mb-4">Technical Skills</h3>
-            <div className="flex flex-wrap gap-4">
-              {skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 ease-in-out"
-                >
-                  {skill.icon}
-                  <span className="text-gray-200">{skill.name}</span>
-                </div>
-              ))}
-            </div>
+            <img
+              src="/images/profile.jpg"
+              alt="Charles Milton"
+              className="w-64 h-64 rounded-full md:rounded-full shadow-lg object-cover md:w-60 md:h-60 lg:w-full lg:h-full lg:rounded-lg"
+            />
           </motion.div>
-        </motion.div>
+
+          {/* Right: About Content */}
+          <motion.div
+            className="w-full lg:w-2/3"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
+          >
+            <h2 className="text-5xl font-bold mb-6 text-blue-400 text-center lg:text-left">
+              About Me
+            </h2>
+            <p className="text-gray-300 leading-relaxed mb-6 text-lg">
+              Hello! I’m <span className="text-blue-300 font-semibold">Charles Milton</span>, 
+              a passionate <span className="text-teal-300 font-semibold">Computer Science student</span> 
+              with a focus on building innovative{' '}
+              <span className="text-blue-400">AI-driven solutions</span> and
+              <span className="text-red-400"> modern web applications</span>.
+            </p>
+            <p className="text-gray-400 mb-8 text-lg">
+              I enjoy combining creativity with technology to solve real-world problems. My current focus
+              is on <span className="text-yellow-400">Machine Learning</span>, 
+              <span className="text-green-400"> Software Development</span>, and building
+              dynamic applications that have a positive impact.
+            </p>
+
+            {/* Skills Section */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-8"
+            >
+              <h3 className="text-2xl font-bold text-gray-200 mb-4">Technical Skills</h3>
+              <div className="flex flex-wrap gap-4">
+                {skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 ease-in-out"
+                  >
+                    {skill.icon}
+                    <span className="text-gray-200">{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="container mx-auto px-6 py-12 mt-8">
+      {/* 3) Testimonials Section - separate container, forced full-width */}
+      <div className="container w-full mx-auto px-6 py-12 mt-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -138,7 +143,6 @@ export default function About() {
           transition={{ duration: 0.6, ease: 'easeInOut' }}
         >
           <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">Testimonials</h2>
-
           {/* Single testimonial card */}
           <div className="max-w-2xl mx-auto">
             <div className="bg-gray-800 rounded-lg p-8 text-center shadow-md hover:scale-105 transition-transform duration-300">
