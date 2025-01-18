@@ -54,77 +54,110 @@ export default function About() {
   return (
       <div className="relative min-h-screen flex items-center bg-gray-900 text-white overflow-hidden">
         {/* Animated Background */}
+      {/* Animated Background */}
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0.3 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="absolute w-72 h-72 bg-blue-500 opacity-20 rounded-full -top-16 -left-16 blur-3xl"></div>
+        <div className="absolute w-72 h-72 bg-teal-400 opacity-20 rounded-full -bottom-12 -right-16 blur-3xl"></div>
+      </motion.div>
+
+      {/* About Content */}
+      <div className="container mx-auto py-12 px-6 flex flex-col lg:flex-row items-center gap-12 relative mt-16">
+        {/* Left Section: Profile Picture */}
         <motion.div
-          className="absolute top-0 left-0 w-full h-full"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 0.3 }}
-          transition={{ duration: 1 }}
+          className="w-full lg:w-1/3 flex justify-center"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: 'easeInOut' }}
         >
-          <div className="absolute w-72 h-72 bg-blue-500 opacity-20 rounded-full -top-16 -left-16 blur-3xl"></div>
-          <div className="absolute w-72 h-72 bg-teal-400 opacity-20 rounded-full -bottom-12 -right-16 blur-3xl"></div>
+          <img
+            src="/images/profile.jpg"
+            alt="Charles Milton"
+            className="w-64 h-64 rounded-full md:rounded-full shadow-lg object-cover md:w-60 md:h-60 lg:w-full lg:h-full lg:rounded-lg"
+          />
         </motion.div>
 
-        {/* About Content */}
-        <div className="container mx-auto py-12 px-6 flex flex-col lg:flex-row items-center gap-12 mt-16 lg:mt-0 relative">
-          {/* Left Section: Profile Picture */}
+        {/* Right Section: About Content */}
+        <motion.div
+          className="w-full lg:w-2/3"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: 'easeInOut' }}
+        >
+          <h2 className="text-5xl font-bold mb-6 text-blue-400 text-center lg:text-left">About Me</h2>
+          <p className="text-gray-300 leading-relaxed mb-6 text-lg">
+            Hello! I’m <span className="text-blue-300 font-semibold">Charles Milton</span>, a passionate{' '}
+            <span className="text-teal-300 font-semibold">Computer Science student</span> with a focus on building
+            innovative <span className="text-blue-400">AI-driven solutions</span> and
+            <span className="text-red-400"> modern web applications</span>.
+          </p>
+
+          <p className="text-gray-400 mb-8 text-lg">
+            I enjoy combining creativity with technology to solve real-world problems. My current focus
+            is on <span className="text-yellow-400">Machine Learning</span>,
+            <span className="text-green-400"> Software Development</span>, and building
+            dynamic applications that have a positive impact.
+          </p>
+
+          {/* Skills Section */}
           <motion.div
-            className="w-full lg:w-1/3 flex justify-center"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8"
           >
-            <img
-              src="/images/profile.jpg"
-              alt="Charles Milton"
-              className="w-64 h-64 rounded-full md:rounded-full  shadow-lg object-cover md:w-60 md:h-60 lg:w-full lg:h-full lg:rounded-lg"
-            />
+            <h3 className="text-2xl font-bold text-gray-200 mb-4">Technical Skills</h3>
+            <div className="flex flex-wrap gap-4">
+              {skills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 ease-in-out"
+                >
+                  {skill.icon}
+                  <span className="text-gray-200">{skill.name}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
-
-          {/* Right Section: About Content */}
-          <motion.div
-            className="w-full lg:w-2/3"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}
-          >
-            <h2 className="text-5xl font-bold mb-6 text-blue-400 text-center lg:text-left">About Me</h2>
-            <p className="text-gray-300 leading-relaxed mb-6 text-lg">
-              Hello! I’m <span className="text-blue-300 font-semibold">Charles Milton</span>, a passionate{' '}
-              <span className="text-teal-300 font-semibold">Computer Science student</span> with a focus on building
-              innovative <span className="text-blue-400">AI-driven solutions</span> and <span className="text-red-400"> modern web applications</span>.
-            </p>
-
-            <p className="text-gray-400 mb-8 text-lg">
-              I enjoy combining creativity with technology to solve real-world problems. My current focus
-              is on <span className="text-yellow-400">Machine Learning</span>, <span className="text-green-400">Software Development</span>, and building
-              dynamic applications that have a positive impact.
-            </p>
-
-            {/* Skills Section */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-8"
-            >
-              <h3 className="text-2xl font-bold text-gray-200 mb-4">Technical Skills</h3>
-              <div className="flex flex-wrap gap-4">
-                {skills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 ease-in-out"
-                  >
-                    {skill.icon}
-                    <span className="text-gray-200">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
+
+      {/* Testimonials Section */}
+      <div className="container mx-auto px-6 py-12 mt-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: 'easeInOut' }}
+        >
+          <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">Testimonials</h2>
+
+          {/* Single testimonial card */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-gray-800 rounded-lg p-8 text-center shadow-md hover:scale-105 transition-transform duration-300">
+              <img
+                src="/images/vrej-sanati.svg"
+                alt="Vrej Sanati"
+                className="w-20 h-20 mx-auto rounded-full object-cover"
+              />
+              <h3 className="mt-4 text-xl md:text-2xl font-semibold text-white">Vrej Sanati</h3>
+              <p className="text-gray-400 text-sm md:text-base">
+                Senior Front-End Web Application Developer at Munchkin
+              </p>
+              <p className="mt-4 text-gray-300 text-base md:text-lg leading-relaxed">
+                “Charles is a very intelligent, hardworking and disciplined individual with extraordinary mannerisms and professionalism. He works diligently and completes projects quickly without wasting time, all while remaining humble. Charles is eager to learn, explore new skills, and take on new responsibilities. He is a pleasure to work with and a great asset to any company that hires him.”
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
 }

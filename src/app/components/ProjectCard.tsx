@@ -26,7 +26,7 @@ export default function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="bg-gray-800 rounded-lg overflow-hidden shadow-lg group hover:shadow-2xl transition-shadow duration-300"
+      className="bg-gray-800 rounded-lg overflow-hidden shadow-lg group hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full"
     >
       {/* Image */}
       <div className="overflow-hidden">
@@ -41,44 +41,47 @@ export default function ProjectCard({
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-2xl font-bold text-blue-300 mb-2">{title}</h3>
-        <p className="text-gray-400 mb-4">{description}</p>
+        <p className="text-gray-400 mb-4 flex-grow">{description}</p>
 
-        {/* Tools */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {tools.map((tool, i) => (
-            <span
-              key={i}
-              className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded"
-            >
-              {tool}
-            </span>
-          ))}
-        </div>
+        {/* Tools and Buttons */}
+        <div className="mt-auto">
+          {/* Tools */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tools.map((tool, i) => (
+              <span
+                key={i}
+                className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
 
-        {/* Buttons */}
-        <div className="flex gap-4">
-          {demo && (
-            <a
-              href={demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-blue-400 hover:text-blue-300 transition"
-            >
-              <FaExternalLinkAlt /> Demo
-            </a>
-          )}
-          {code && (
-            <a
-              href={code}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-gray-400 hover:text-gray-300 transition"
-            >
-              <FaGithub /> Code
-            </a>
-          )}
+          {/* Buttons */}
+          <div className="flex gap-4">
+            {demo && (
+              <a
+                href={demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-blue-400 hover:text-blue-300 transition"
+              >
+                <FaExternalLinkAlt /> Demo
+              </a>
+            )}
+            {code && (
+              <a
+                href={code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-gray-400 hover:text-gray-300 transition"
+              >
+                <FaGithub /> Code
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
