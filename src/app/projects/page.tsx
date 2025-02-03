@@ -25,7 +25,7 @@ export default function Projects() {
       title: "XR Engineering Club's Official Website",
       description:
         'Built a responsive and user-friendly platform with real-time updates on the club’s mission, officers, and projects for 100+ members.',
-      tools: ['Next.js', 'Node.js', 'Tailwind CSS'],
+      tools: ['Next.js', 'Node.js', 'Supabase', 'Tailwind CSS'],
       image: '/images/xrclub-website.png',
       demo: 'https://www.xrengineering.club',
       code: 'https://github.com/chuckmilton/xrec-website',

@@ -68,7 +68,7 @@ export default function ProjectCard({
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-blue-400 hover:text-blue-300 transition"
               >
-                <FaExternalLinkAlt /> Demo
+                <FaExternalLinkAlt /> Link
               </a>
             )}
             {code && (
@@ -78,7 +78,7 @@ export default function ProjectCard({
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-gray-400 hover:text-gray-300 transition"
               >
-                <FaGithub /> Code
+                <FaGithub /> GitHub
               </a>
             )}
           </div>
