@@ -99,7 +99,7 @@ export default function About() {
             </h2>
             <p className="text-gray-300 leading-relaxed mb-6 text-lg">
               Hello! I’m <span className="text-blue-300 font-semibold">Charles Milton</span>, 
-              a passionate <span className="text-teal-300 font-semibold">Computer Science student</span> 
+              a passionate <span className="text-teal-300 font-semibold">Computer Science student </span> 
               with a focus on building innovative{' '}
               <span className="text-blue-400">AI-driven solutions</span> and
               <span className="text-red-400"> modern web applications</span>.
