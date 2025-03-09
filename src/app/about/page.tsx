@@ -23,6 +23,7 @@ import {
   SiJavascript,
   SiCplusplus,
   SiPhp,
+  SiSupabase,
 } from 'react-icons/si';
 
 const { motion } = FramerMotion;
@@ -48,6 +49,7 @@ export default function About() {
     { name: 'MongoDB', icon: <SiMongodb className="text-green-400" /> },
     { name: 'MySQL', icon: <SiMysql className="text-blue-500" /> },
     { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-400" /> },
+    { name: 'Supabase', icon: <SiSupabase className="text-green-500" /> },
     { name: 'GitHub', icon: <FaGithub className="text-gray-300" /> },
   ];
 
