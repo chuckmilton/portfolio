@@ -15,7 +15,7 @@ export default function Projects() {
     {
       title: "ACM at CSULB's Official Website",
       description:
-        'Designed and developed a responsive website for the Association for Computing Machinery (ACM) at CSULB, showcasing events, projects, blogs, and resources for 200+ members.',
+        'Designed and developed a responsive website for the Association for Computing Machinery (ACM) at CSULB, showcasing events, projects, blogs, and resources for 500+ members.',
       tools: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
       image: '/images/acm-website.png',
       demo: 'https://acm-website-2024-two.vercel.app/',
