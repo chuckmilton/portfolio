@@ -4,11 +4,34 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { motion } from 'framer-motion';
 import { FaLaptopCode } from 'react-icons/fa';
-import { MdWork, MdEngineering } from 'react-icons/md';
+import { MdWork, MdEngineering, MdShoppingCart } from 'react-icons/md';
 import Image from 'next/image';
 
 export default function Experience() {
     const experiences = [
+      {
+        company: 'Amazon',
+        logo: '/logos/amazon-logo.png',
+        role: 'Software Development Engineer Intern',
+        duration: 'May 2025 - August 2025',
+        description: [
+          'Will be working with Amazon as a Software Development Engineer Intern this summer!',
+        ],
+        icon: <MdShoppingCart />,
+        iconColor: '#FF9900',
+      },
+      {
+        company: 'DreamWay Media',
+        logo: '/logos/dreamway.png',
+        role: 'Web Application Development Intern',
+        duration: 'Sept 2024 - Dec 2024',
+        description: [
+          'Assisted in building and maintaining e-commerce dynamic websites using PHP, React, and other modern web technologies.',
+          'Optimized platforms for speed, SEO, and user experience.',
+        ],
+        icon: <FaLaptopCode />,
+        iconColor: '#60A5FA',
+      },
       {
         company: 'Association for Computing Machinery',
         logo: '/logos/acm.png',
@@ -32,18 +55,6 @@ export default function Experience() {
         ],
         icon: <MdEngineering />,
         iconColor: '#FBBF24',
-      },
-      {
-        company: 'DreamWay Media',
-        logo: '/logos/dreamway.png',
-        role: 'Web Application Development Intern',
-        duration: 'Sept 2024 - Dec 2024',
-        description: [
-          'Assisted in building and maintaining e-commerce dynamic websites using PHP, React, and other modern web technologies.',
-          'Optimized platforms for speed, SEO, and user experience.',
-        ],
-        icon: <FaLaptopCode />,
-        iconColor: '#60A5FA',
       },
     ];
   
