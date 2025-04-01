@@ -80,7 +80,7 @@ export default function About() {
             transition={{ duration: 0.6, ease: 'easeInOut' }}
           >
             <img
-              src="/images/profile.jpg"
+              src="/images/cropped-me.png"
               alt="Charles Milton"
               className="w-64 h-64 rounded-full md:rounded-full shadow-lg object-cover md:w-60 md:h-60 lg:w-full lg:h-full lg:rounded-lg"
             />
