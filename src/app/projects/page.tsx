@@ -24,7 +24,7 @@ export default function Projects() {
     {
       title: 'Rate My CSULB Professors',
       description:
-        'Engineered a Chrome extension that integrates professor ratings into CSULB’s registration system, reducing query latency by 50% using GraphQL and LRU caching. The tool has 100+ active users.',
+        'Engineered a Chrome extension that integrates professor ratings into CSULB’s registration system, reducing query latency by 50% using GraphQL and LRU caching. The tool has 200+ active users.',
       tools: ['HTML', 'CSS', 'JavaScript', 'GraphQL'],
       image: '/images/csulb-extension.png',
       demo: 'https://chromewebstore.google.com/detail/Rate%20My%20CSULB%20Professors/hfacilllhlfjdaakkmhmbdkidcibhoco',
