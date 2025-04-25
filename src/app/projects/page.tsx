@@ -4,6 +4,22 @@ import { motion } from 'framer-motion';
 export default function Projects() {
   const projects = [
     {
+      title: "TurnTalks",
+      description:
+        "AI-powered discussion platform with dynamic sessions, OpenAI-driven questions, and real-time speech features—originally built for and still used my mother’s book club to spark engaging dialogues.",
+      tools: [
+        "Next.js",
+        "React",
+        "Supabase",
+        "OpenAI API",
+        "react-speech-recognition",
+        "Tailwind CSS",
+      ],
+      image: '/images/turntalks.png',
+      demo: 'https://www.turntalks.com/',
+      code: 'https://github.com/chuckmilton/turntalks',
+    },
+    {
       title: "CSULB Schedule Generator",
       description:
         'Developed a Flask-based web app that helps CSULB students create optimized course schedules using real-time data from Supabase. It allows filtering by professors, time slots, and days, with results displayed in a responsive calendar format.',
