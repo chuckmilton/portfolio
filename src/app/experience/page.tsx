@@ -23,7 +23,7 @@ export default function Experience() {
       {
         company: 'DreamWay Media',
         logo: '/logos/dreamway.png',
-        role: 'Web Application Development Intern',
+        role: 'Software Engineer Intern',
         duration: 'Sept 2024 - Dec 2024',
         description: [
           'Assisted in building and maintaining e-commerce dynamic websites using PHP, React, and other modern web technologies.',
@@ -35,7 +35,7 @@ export default function Experience() {
       {
         company: 'Association for Computing Machinery',
         logo: '/logos/acm.png',
-        role: 'Web Developer',
+        role: 'Full-Stack Developer',
         duration: 'Aug 2024 - Present',
         description: [
           'Develop and manage ACM’s websites, including promoting CSULB’s BeachHacks.',
@@ -47,7 +47,7 @@ export default function Experience() {
       {
         company: 'XR Engineering Club',
         logo: '/logos/xrclub.png',
-        role: 'Web Developer, Prev. Project Lead',
+        role: 'Full-Stack Developer, Prev. Project Lead',
         duration: 'Sept 2023 - Present',
         description: [
           'Overhauled the club’s website, improving functionality and user experience.',
