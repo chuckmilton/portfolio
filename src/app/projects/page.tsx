@@ -34,7 +34,7 @@ export default function Projects() {
         'Designed and developed a responsive website for the Association for Computing Machinery (ACM) at CSULB, showcasing events, projects, blogs, and resources for 500+ members.',
       tools: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
       image: '/images/acm-website.png',
-      demo: 'https://www.acmcsulb.com/',
+      demo: 'https://csulb.acm.org/',
       code: 'https://github.com/chuckmilton/acm-website-2024',
     },
     {
