@@ -83,23 +83,22 @@ export default function About() {
     { name: 'GitHub', icon: <FaGithub className="text-gray-300" /> },
 ];
   return (
-    // 1) Removed "flex flex-col" on the top-level container
     <div className="relative min-h-screen bg-gray-900 text-white overflow-hidden">
-      {/* Animated Background */}
+      {/* Animated Background (behind, ignore clicks) */}
       <motion.div
-        className="absolute top-0 left-0 w-full h-full"
+        className="pointer-events-none absolute inset-0 -z-10"
         initial={{ opacity: 1 }}
         animate={{ opacity: 0.3 }}
         transition={{ duration: 1 }}
+        aria-hidden="true"
       >
         <div className="absolute w-72 h-72 bg-blue-500 opacity-20 rounded-full -top-16 -left-16 blur-3xl"></div>
         <div className="absolute w-72 h-72 bg-teal-400 opacity-20 rounded-full -bottom-12 -right-16 blur-3xl"></div>
       </motion.div>
 
-      {/* About Content Container */}
-      <div className="container mx-auto py-12 px-6 mt-16">
-        {/* 2) About Section Row: flex-col on mobile, flex-row on large screens */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 relative">
+      {/* About Content Container (pushed down to avoid nav overlap) */}
+      <div className="relative container mx-auto py-12 px-6 pt-24">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left: Profile Picture */}
           <motion.div
             className="w-full lg:w-1/3 flex justify-center"
@@ -111,7 +110,7 @@ export default function About() {
             <img
               src="/images/cropped-me.png"
               alt="Charles Milton"
-              className="w-64 h-64 rounded-full md:rounded-full shadow-lg object-cover md:w-60 md:h-60 lg:w-full lg:h-full lg:rounded-lg"
+              className="w-64 h-64 rounded-full shadow-lg object-cover md:w-60 md:h-60 lg:w-full lg:h-full lg:rounded-lg"
             />
           </motion.div>
 
@@ -127,17 +126,14 @@ export default function About() {
               About Me
             </h2>
             <p className="text-gray-300 leading-relaxed mb-6 text-lg">
-              Hello! I’m <span className="text-blue-300 font-semibold">Charles Milton</span>, 
-              a passionate <span className="text-teal-300 font-semibold">Computer Science student </span> 
-              with a focus on building innovative{' '}
-              <span className="text-blue-400">AI-driven solutions</span> and
+              Hello! I’m <span className="text-blue-300 font-semibold">Charles Milton</span>, a passionate{' '}
+              <span className="text-teal-300 font-semibold">Computer Science student</span> with a focus on building
+              innovative <span className="text-blue-400">AI-driven solutions</span> and
               <span className="text-red-400"> modern web applications</span>.
             </p>
             <p className="text-gray-400 mb-8 text-lg">
-              I enjoy combining creativity with technology to solve real-world problems. My current focus
-              is on <span className="text-yellow-400">Machine Learning</span>, 
-              <span className="text-green-400"> Software Development</span>, and building
-              dynamic applications that have a positive impact.
+              I enjoy combining creativity with technology to solve real-world problems. My current focus is on{' '}
+              <span className="text-yellow-400">Machine Learning</span>, <span className="text-green-400">Software Development</span>, and building dynamic applications that have a positive impact.
             </p>
 
             {/* Skills Section */}
@@ -165,8 +161,8 @@ export default function About() {
         </div>
       </div>
 
-      {/* 3) Testimonials Section - separate container, forced full-width */}
-      <div className="relative z-10 container w-full mx-auto px-6 py-12 mt-8">
+      {/* Testimonials Section */}
+      <div className="container w-full mx-auto px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -174,7 +170,6 @@ export default function About() {
           transition={{ duration: 0.6, ease: 'easeInOut' }}
         >
           <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">Testimonials</h2>
-          {/* Single testimonial card */}
           <div className="max-w-2xl mx-auto">
             <div className="bg-gray-800 rounded-lg p-8 text-center shadow-md hover:scale-105 transition-transform duration-300">
               <img
@@ -186,8 +181,10 @@ export default function About() {
               <p className="text-gray-400 text-sm md:text-base">
                 Senior Front-End Web Application Developer at Munchkin
               </p>
-              <p className="mt-4 text-gray-300 text-base md:text-lg leading-relaxed">
-                “Charles is a very intelligent, hardworking and disciplined individual with extraordinary mannerisms and professionalism. He works diligently and completes projects quickly without wasting time, all while remaining humble. Charles is eager to learn, explore new skills, and take on new responsibilities. He is a pleasure to work with and a great asset to any company that hires him.”
+              <p className="mt-4 text-gray-300 text-base md:text-lg leading-relaxed select-text">
+                “Charles is a very intelligent, hardworking and disciplined individual with extraordinary mannerisms and professionalism.
+                He works diligently and completes projects quickly without wasting time, all while remaining humble. Charles is eager to
+                learn, explore new skills, and take on new responsibilities. He is a pleasure to work with and a great asset to any company that hires him.”
               </p>
             </div>
           </div>
