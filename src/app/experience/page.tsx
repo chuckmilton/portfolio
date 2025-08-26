@@ -13,7 +13,7 @@ export default function Experience() {
         company: 'Associated Students Inc. at CSULB',
         logo: '/logos/asi-logo.jpeg',
         role: 'Software Developer',
-        duration: 'August 2025 - Present',
+        duration: 'Aug 2025 - Present',
         description: [
           'Maintain and enhance ASI’s web platforms to ensure accessibility, reliability, and performance for 40,000+ students.',
           'Develop responsive websites supporting student programs and events, improving engagement across campus.',
@@ -25,7 +25,7 @@ export default function Experience() {
         company: 'Amazon',
         logo: '/logos/amazon-logo.png',
         role: 'Software Development Engineer Intern',
-        duration: 'May 2025 - August 2025',
+        duration: 'May 2025 - Aug 2025',
         description: [
           'AFT - Inventory Controllership 📦',
           'Utilized internal tools to improve and manage Amazon’s vast inventory using Java, TypeScript, and AWS services.',
