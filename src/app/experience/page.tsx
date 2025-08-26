@@ -49,7 +49,7 @@ export default function Experience() {
         company: 'Association for Computing Machinery',
         logo: '/logos/acm.png',
         role: 'Full-Stack Developer',
-        duration: 'Aug 2024 - June 2025',
+        duration: 'Aug 2024 - Aug 2025',
         description: [
           'Develop and manage ACM’s websites, including promoting CSULB’s BeachHacks.',
           'Design user-friendly features for event sign-ups to enhance engagement.',
@@ -61,7 +61,7 @@ export default function Experience() {
         company: 'XR Engineering Club',
         logo: '/logos/xrclub.png',
         role: 'Full-Stack Developer, Prev. Project Lead',
-        duration: 'Sept 2023 - June 2025',
+        duration: 'Sept 2023 - Aug 2025',
         description: [
           'Overhauled the club’s website, improving functionality and user experience.',
           'Led a team to develop a cooking simulator game with recipe management and scoring features.',
