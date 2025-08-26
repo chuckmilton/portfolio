@@ -166,7 +166,7 @@ export default function About() {
       </div>
 
       {/* 3) Testimonials Section - separate container, forced full-width */}
-      <div className="container w-full mx-auto px-6 py-12 mt-8">
+      <div className="relative z-10 container w-full mx-auto px-6 py-12 mt-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
