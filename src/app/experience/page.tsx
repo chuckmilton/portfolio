@@ -4,18 +4,31 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { motion } from 'framer-motion';
 import { FaLaptopCode } from 'react-icons/fa';
-import { MdWork, MdEngineering, MdShoppingCart } from 'react-icons/md';
+import { MdWork, MdEngineering, MdShoppingCart, MdSchool } from 'react-icons/md';
 import Image from 'next/image';
 
 export default function Experience() {
     const experiences = [
       {
+        company: 'Associated Students Inc. at CSULB',
+        logo: '/logos/asi-logo.jpeg',
+        role: 'Software Developer',
+        duration: 'August 2025 - Present',
+        description: [
+          'Maintain and enhance ASI’s web platforms to ensure accessibility, reliability, and performance for 40,000+ students.',
+          'Develop responsive websites supporting student programs and events, improving engagement across campus.',
+        ],
+        icon: <MdSchool />,
+        iconColor: '#8B5CF6',
+      },
+      {
         company: 'Amazon',
         logo: '/logos/amazon-logo.png',
         role: 'Software Development Engineer Intern',
-        duration: 'May 2025 - Present',
+        duration: 'May 2025 - August 2025',
         description: [
-          'Will be working with Amazon as a Software Development Engineer Intern this summer!',
+          'AFT - Inventory Controllership 📦',
+          'Utilized internal tools to improve and manage Amazon’s vast inventory using Java, TypeScript, and AWS services.',
         ],
         icon: <MdShoppingCart />,
         iconColor: '#FF9900',
@@ -26,8 +39,8 @@ export default function Experience() {
         role: 'Software Engineer Intern',
         duration: 'Sept 2024 - Dec 2024',
         description: [
-          'Assisted in building and maintaining e-commerce dynamic websites using PHP, React, and other modern web technologies.',
-          'Optimized platforms for speed, SEO, and user experience.',
+          'Restructured and upgraded existing e-commerce architecture with PHP and React, resulting in a 30% improvement in website performance score, which was the highest on record.',
+          'Incorporated Docker to containerize the development environment for a 5-person team, enabling cross-OS consistency, faster onboarding, and reducing environment-related bugs.',
         ],
         icon: <FaLaptopCode />,
         iconColor: '#60A5FA',

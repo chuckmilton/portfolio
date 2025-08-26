@@ -24,6 +24,21 @@ import {
   SiCplusplus,
   SiPhp,
   SiSupabase,
+  SiSharp,
+  SiExpress,
+  SiDocker,
+  SiGithubactions,
+  SiPostman,
+  SiJunit5,
+  SiAmazon,
+  SiAmazondynamodb,
+  SiAmazons3,
+  SiAmazoncloudwatch,
+  SiGooglecloud,
+  SiFirebase,
+  SiNeo4J,
+  SiRedis,
+  SiGraphql,
 } from 'react-icons/si';
 
 const { motion } = FramerMotion;
@@ -32,6 +47,7 @@ export default function About() {
   const skills = [
     { name: 'Python', icon: <FaPython className="text-yellow-400" /> },
     { name: 'Java', icon: <FaJava className="text-red-500" /> },
+    { name: 'C#', icon: <SiSharp className="text-purple-400" /> },
     { name: 'TypeScript', icon: <SiTypescript className="text-blue-500" /> },
     { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" /> },
     { name: 'C++', icon: <SiCplusplus className="text-blue-400" /> },
@@ -41,6 +57,7 @@ export default function About() {
     { name: 'React.js', icon: <FaReact className="text-blue-400" /> },
     { name: 'Next.js', icon: <SiNextdotjs className="text-white" /> },
     { name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
+    { name: 'Express.js', icon: <SiExpress className="text-gray-300" /> },
     { name: 'Flask', icon: <SiFlask className="text-gray-400" /> },
     { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-300" /> },
     { name: 'TensorFlow', icon: <SiTensorflow className="text-orange-500" /> },
@@ -50,9 +67,21 @@ export default function About() {
     { name: 'MySQL', icon: <SiMysql className="text-blue-500" /> },
     { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-400" /> },
     { name: 'Supabase', icon: <SiSupabase className="text-green-500" /> },
+    { name: 'Neo4j', icon: <SiNeo4J className="text-teal-400" /> },
+    { name: 'Redis', icon: <SiRedis className="text-red-500" /> },
+    { name: 'GraphQL', icon: <SiGraphql className="text-pink-500" /> },
+    { name: 'AWS', icon: <SiAmazon className="text-orange-400" /> },
+    { name: 'DynamoDB', icon: <SiAmazondynamodb className="text-blue-500" /> },
+    { name: 'S3', icon: <SiAmazons3 className="text-yellow-500" /> },
+    { name: 'CloudWatch', icon: <SiAmazoncloudwatch className="text-green-500" /> },
+    { name: 'Google Cloud', icon: <SiGooglecloud className="text-blue-500" /> },
+    { name: 'Firebase', icon: <SiFirebase className="text-orange-400" /> },
+    { name: 'Docker', icon: <SiDocker className="text-blue-400" /> },  
+    { name: 'CI/CD', icon: <SiGithubactions className="text-gray-300" /> },
+    { name: 'JUnit', icon: <SiJunit5 className="text-red-500" /> },
+    { name: 'Postman', icon: <SiPostman className="text-orange-500" /> },
     { name: 'GitHub', icon: <FaGithub className="text-gray-300" /> },
-  ];
-
+];
   return (
     // 1) Removed "flex flex-col" on the top-level container
     <div className="relative min-h-screen bg-gray-900 text-white overflow-hidden">
