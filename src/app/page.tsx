@@ -45,12 +45,20 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <a
-            href="/projects"
-            className="px-6 py-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-500 transition-transform transform hover:scale-105 shadow-md"
-          >
-            View My Projects
-          </a>
+            <a
+              href="/projects"
+              className="px-6 py-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-500 transition-transform transform hover:scale-105 shadow-md mr-4"
+            >
+              View My Projects
+            </a>
+            <a
+              href="/images/Charles_Milton_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-teal-500 rounded-lg text-white font-semibold hover:bg-teal-400 transition-transform transform hover:scale-105 shadow-md"
+            >
+              View My Resume
+            </a>
         </motion.div>
 
         {/* Social Links */}
