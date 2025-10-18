@@ -32,10 +32,10 @@ export default function Projects() {
       title: "ACM at CSULB's Official Website",
       description:
         'Designed and developed a responsive website for the Association for Computing Machinery (ACM) at CSULB, showcasing events, projects, blogs, and resources for 500+ members.',
-      tools: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      tools: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Cloudinary', 'Tailwind CSS'],
       image: '/images/acm-website.png',
-      demo: 'https://csulb.acm.org/',
-      code: 'https://github.com/chuckmilton/acm-website-2024',
+      demo: 'https://www.acm-csulb.org/',
+      code: 'https://github.com/csulbacm/acm-website-2024',
     },
     {
       title: 'Rate My CSULB Professors',

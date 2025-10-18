@@ -15,6 +15,7 @@ export default function Experience() {
         role: 'Software Developer',
         duration: 'Aug 2025 - Present',
         description: [
+          'Replaced 22WestMedia’s Issuu digital-magazine hosting (third-party platform, $500/month) by building a custom flipbook solution and an admin dashboard for uploads/metadata with React, which eliminated hosting costs by 100% and improved access for thousands of readers.',
           'Maintain and enhance ASI’s web platforms to ensure accessibility, reliability, and performance for 40,000+ students.',
           'Develop responsive websites supporting student programs and events, improving engagement across campus.',
         ],
@@ -51,8 +52,8 @@ export default function Experience() {
         role: 'Full-Stack Developer',
         duration: 'Aug 2024 - Aug 2025',
         description: [
-          'Develop and manage ACM’s websites, including promoting CSULB’s BeachHacks.',
-          'Design user-friendly features for event sign-ups to enhance engagement.',
+          'Built the ACM 2024 chapter website (currently used today), centralizing event updates, blog posts, and resources for 500+ members.',
+          'Enhanced the BeachHacks hackathon platform by integrating user-driven features and refining UI components, helping the event surpass 300+ applications (50% above capacity).',
         ],
         icon: <MdWork />,
         iconColor: '#34D399',
@@ -63,8 +64,8 @@ export default function Experience() {
         role: 'Full-Stack Developer, Prev. Project Lead',
         duration: 'Sept 2023 - Aug 2025',
         description: [
-          'Overhauled the club’s website, improving functionality and user experience.',
-          'Led a team to develop a cooking simulator game with recipe management and scoring features.',
+          'Developed and maintained the club website using Next.js, Supabase, GCP, and TailwindCSS, automating event updates and email notifications for 100+ members.',
+          'Led the development of an AR Cooking Simulator using Unity and AR frameworks, showcased at the Senior Project Expo and selected by the CSULB ISPACE Lab for further collaboration.',
         ],
         icon: <MdEngineering />,
         iconColor: '#FBBF24',
