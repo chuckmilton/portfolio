@@ -40,6 +40,7 @@ import {
   SiNeo4J,
   SiRedis,
   SiGraphql,
+  SiNestjs,
 } from 'react-icons/si';
 
 const { motion } = FramerMotion;
@@ -56,8 +57,10 @@ export default function About() {
     { name: 'HTML5', icon: <FaHtml5 className="text-orange-500" /> },
     { name: 'CSS3', icon: <FaCss3Alt className="text-blue-500" /> },
     { name: 'React.js', icon: <FaReact className="text-blue-400" /> },
+    { name: 'React Native', icon: <FaReact className="text-blue-400" /> },
     { name: 'Next.js', icon: <SiNextdotjs className="text-white" /> },
     { name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
+    { name: 'NestJS', icon: <SiNestjs className="text-red-500" /> },
     { name: 'Express.js', icon: <SiExpress className="text-gray-300" /> },
     { name: 'Flask', icon: <SiFlask className="text-gray-400" /> },
     { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-300" /> },

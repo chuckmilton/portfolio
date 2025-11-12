@@ -15,9 +15,9 @@ export default function Experience() {
         role: 'Software Developer',
         duration: 'Aug 2025 - Present',
         description: [
-          'Replaced 22WestMedia’s Issuu digital-magazine hosting (third-party platform, $500/month) by building a custom flipbook solution and an admin dashboard for uploads/metadata with React, which eliminated hosting costs by 100% and improved access for thousands of readers.',
-          'Maintain and enhance ASI’s web platforms to ensure accessibility, reliability, and performance for 40,000+ students.',
-          'Develop responsive websites supporting student programs and events, improving engagement across campus.',
+          'Replaced a $500/month third-party magazine host with an in-house viewer and uploads dashboard (React, Node.js, Cloudflare R2, MongoDB, GridFS), cutting cost to $0 ($6k/yr) and serving thousands of users.',
+          'Maintain and develop ASI web platforms for 40,000+ students with accessibility, reliability, and performance goals.',
+          'Ship responsive features for student programs and events that increase engagement across campus.',
         ],
         icon: <MdSchool />,
         iconColor: '#8B5CF6',
@@ -28,8 +28,9 @@ export default function Experience() {
         role: 'Software Development Engineer Intern',
         duration: 'May 2025 - Aug 2025',
         description: [
-          'AFT - Inventory Controllership 📦',
-          'Utilized internal tools to improve and manage Amazon’s vast inventory using Java, TypeScript, and AWS services.',
+          'Built an AWS-native Java service to correct retail inventory misclassification in fulfillment centers, reducing cost data inaccuracies by 80% globally and adding CloudWatch metrics and monitoring.',
+          'Collaborated with SDE II engineers to resolve a Sev-2 affecting 1,700+ transactions by shipping a hotfix that restored system stability and data integrity.',
+          'Authored internal documentation that improved onboarding and knowledge sharing across engineering and accounting teams.'
         ],
         icon: <MdShoppingCart />,
         iconColor: '#FF9900',
@@ -40,8 +41,9 @@ export default function Experience() {
         role: 'Software Engineer Intern',
         duration: 'Sept 2024 - Dec 2024',
         description: [
-          'Restructured and upgraded existing e-commerce architecture with PHP and React, resulting in a 30% improvement in website performance score, which was the highest on record.',
-          'Incorporated Docker to containerize the development environment for a 5-person team, enabling cross-OS consistency, faster onboarding, and reducing environment-related bugs.',
+          'Converted Figma designs into responsive PHP/React pages with pixel-accurate UI.',
+          'Refactored e-commerce web apps, boosting performance scores by 30%.',
+          'Containerized development with Docker for a 5-person team, speeding onboarding and reducing environment issues.'
         ],
         icon: <FaLaptopCode />,
         iconColor: '#60A5FA',
@@ -49,7 +51,7 @@ export default function Experience() {
       {
         company: 'Association for Computing Machinery',
         logo: '/logos/acm.png',
-        role: 'Full-Stack Developer',
+        role: 'Lead Full-Stack Developer',
         duration: 'Aug 2024 - Aug 2025',
         description: [
           'Built the ACM 2024 chapter website (currently used today), centralizing event updates, blog posts, and resources for 500+ members.',
@@ -61,7 +63,7 @@ export default function Experience() {
       {
         company: 'XR Engineering Club',
         logo: '/logos/xrclub.png',
-        role: 'Full-Stack Developer, Prev. Project Lead',
+        role: 'Full-Stack Developer & Project Lead',
         duration: 'Sept 2023 - Aug 2025',
         description: [
           'Developed and maintained the club website using Next.js, Supabase, GCP, and TailwindCSS, automating event updates and email notifications for 100+ members.',

@@ -32,7 +32,7 @@ export default function Projects() {
       title: "ACM at CSULB's Official Website",
       description:
         'Designed and developed a responsive website for the Association for Computing Machinery (ACM) at CSULB, showcasing events, projects, blogs, and resources for 500+ members.',
-      tools: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Cloudinary', 'Tailwind CSS'],
+      tools: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Cloudinary', 'Brevo SMTP', 'Discord API', 'Tailwind CSS'],
       image: '/images/acm-website.png',
       demo: 'https://www.acm-csulb.org/',
       code: 'https://github.com/csulbacm/acm-website-2024',
@@ -50,7 +50,7 @@ export default function Projects() {
       title: "XR Engineering Club's Official Website",
       description:
         'Built a responsive and user-friendly platform with real-time updates on the club’s mission, officers, and projects for 100+ members.',
-      tools: ['Next.js', 'Node.js', 'Supabase', 'Tailwind CSS'],
+      tools: ['Next.js', 'Node.js', 'Supabase', 'GCP', 'Tailwind CSS'],
       image: '/images/xrclub-website.png',
       demo: 'https://www.xrengineering.club',
       code: 'https://github.com/chuckmilton/xrec-website',
