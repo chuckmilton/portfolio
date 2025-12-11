@@ -6,18 +6,19 @@ import { SiAmazon } from 'react-icons/si';
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-      {/* Animated Background with Grid Pattern */}
+      {/* Grid Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-20"></div>
       
+      {/* Animated Background */}
       <motion.div
         className="absolute top-0 left-0 w-full h-full pointer-events-none"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1 }}
       >
-        <div className="absolute w-96 h-96 bg-blue-500/30 rounded-full -top-20 -left-20 blur-3xl animate-pulse"></div>
-        <div className="absolute w-96 h-96 bg-cyan-500/30 rounded-full -bottom-20 -right-20 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute w-72 h-72 bg-purple-500/20 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute w-96 h-96 bg-blue-500/20 rounded-full -top-16 -left-16 blur-3xl"></div>
+        <div className="absolute w-96 h-96 bg-cyan-500/20 rounded-full -bottom-12 -right-16 blur-3xl"></div>
+        <div className="absolute w-72 h-72 bg-purple-500/10 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       </motion.div>
 
       {/* Content */}
