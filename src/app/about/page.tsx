@@ -146,7 +146,7 @@ export default function About() {
               innovative <span className="text-blue-400">AI-driven solutions</span> and
               <span className="text-red-400"> modern web applications</span>.
             </p>
-            <p className="text-gray-400 mb-8 text-lg">
+            <p className="text-gray-300 mb-8 text-lg">
               I enjoy combining creativity with technology to solve real-world problems. My current focus is on{' '}
               <span className="text-yellow-400">Machine Learning</span>, <span className="text-green-400">Software Development</span>, and building dynamic applications that have a positive impact.
             </p>
