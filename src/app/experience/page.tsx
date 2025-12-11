@@ -141,22 +141,21 @@ export default function Experience() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="flex items-center mb-4 pb-4 border-b border-slate-700">
-                      <div className="relative">
+                    <div className="flex items-start sm:items-center mb-4 pb-4 border-b border-slate-700 gap-3">
+                      <div className="relative flex-shrink-0 rounded-full p-1">
                         <Image
                           src={exp.logo}
                           alt={exp.company}
                           width={56}
                           height={56}
-                          className="rounded-full mr-4 border-2 border-slate-700 object-cover"
-                          style={{ width: '56px', height: '56px' }}
+                          className="rounded-full border-2 border-slate-700 object-contain w-12 h-12 sm:w-14 sm:h-14"
                         />
                       </div>
-                      <div>
-                        <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text break-words">
                           {exp.company}
                         </h3>
-                        <h4 className="text-slate-300 font-medium mt-1">{exp.role}</h4>
+                        <h4 className="text-sm sm:text-base text-slate-300 font-medium mt-1 break-words leading-snug">{exp.role}</h4>
                       </div>
                     </div>
                     <ul className="space-y-3 text-slate-300 leading-relaxed">
