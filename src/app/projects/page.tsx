@@ -82,32 +82,40 @@ export default function Projects() {
   ];
 
   return (
-      <div className="relative min-h-screen bg-gray-900 text-white py-12 px-6">
+      <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 px-6">
+        {/* Grid Background Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
+        
         {/* Background Glow */}
         <motion.div
-          className="absolute top-0 left-0 w-full h-full"
+          className="absolute top-0 left-0 w-full h-full pointer-events-none"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.2 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="absolute w-72 h-72 bg-blue-500 opacity-20 rounded-full -top-16 -left-16 blur-3xl"></div>
-          <div className="absolute w-72 h-72 bg-teal-400 opacity-20 rounded-full -bottom-12 -right-16 blur-3xl"></div>
+          <div className="absolute w-96 h-96 bg-blue-500/20 rounded-full -top-16 -left-16 blur-3xl"></div>
+          <div className="absolute w-96 h-96 bg-cyan-500/20 rounded-full -bottom-12 -right-16 blur-3xl"></div>
+          <div className="absolute w-72 h-72 bg-purple-500/10 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
         </motion.div>
 
         {/* Content */}
-        <div className="container mx-auto px-6 mt-16 relative">
-        <motion.h2
-          className="text-5xl font-bold mb-12 text-blue-400 text-center"
-          initial={{ opacity: 0, y: 20 }} // Start with opacity 0 and slide up
-          animate={{ opacity: 1, y: 0 }} // Fade in and slide to original position
-          transition={{ duration: 0.8, ease: 'easeOut' }} // Smooth animation
-        >
-          Projects
-        </motion.h2>
+        <div className="container mx-auto px-6 mt-20 relative">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
+            <h2 className="text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 text-transparent bg-clip-text pb-2">
+              Projects
+            </h2>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}
+                index={index}
                 title={project.title}
                 description={project.description}
                 tools={project.tools}

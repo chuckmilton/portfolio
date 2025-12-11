@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -29,13 +30,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-900 text-white p-4 fixed w-full top-0 z-10 shadow-md">
+    <nav className="bg-slate-900 text-white px-6 py-4 fixed w-full top-0 z-50 border-b border-slate-800 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
          {/* Logo Section */}
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
           {showVideo ? (
             <video
-              src="/videos/cm-logo.mp4" // Replace with the path to your MP4
+              src="/videos/cm-logo.mp4"
               autoPlay
               muted
               playsInline
@@ -45,25 +46,45 @@ export default function Navbar() {
               className="w-12 h-12"
             />
           ) : (
-            <img
-              src="/images/cm-logo-static.png" // Replace with your static logo
-              alt="CM Static Logo"
+            <Image
+              src="/images/cm-logo-static.png"
+              alt="Charles Milton Logo"
+              width={48}
+              height={48}
               className="w-12 h-12"
+              priority
             />
           )}
-        </div>
+        </Link>
 
         {/* Hamburger Menu */}
         <button
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-white focus:outline-none relative w-8 h-8 flex items-center justify-center"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
+          suppressHydrationWarning
         >
-          <div className="w-6 h-1 bg-white mb-1.5 transition-transform duration-300 ease-in-out transform origin-center" 
-               style={{ transform: isOpen ? 'rotate(45deg) translate(5px, 5px)' : 'rotate(0)' }}></div>
-          <div className={`w-6 h-1 bg-white mb-1.5 transition-all duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></div>
-          <div className="w-6 h-1 bg-white transition-transform duration-300 ease-in-out transform origin-center" 
-               style={{ transform: isOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'rotate(0)' }}></div>
+          <div className="w-6 relative flex flex-col items-center justify-center">
+            <span 
+              className="w-full h-0.5 bg-white absolute transition-all duration-300 ease-in-out"
+              style={{
+                transform: isOpen ? 'rotate(45deg)' : 'translateY(-8px)',
+              }}
+            ></span>
+            <span 
+              className="w-full h-0.5 bg-white transition-all duration-300 ease-in-out"
+              style={{
+                opacity: isOpen ? 0 : 1,
+                transform: isOpen ? 'scale(0)' : 'scale(1)',
+              }}
+            ></span>
+            <span 
+              className="w-full h-0.5 bg-white absolute transition-all duration-300 ease-in-out"
+              style={{
+                transform: isOpen ? 'rotate(-45deg)' : 'translateY(8px)',
+              }}
+            ></span>
+          </div>
         </button>
 
         {/* Navbar Links */}
@@ -74,7 +95,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden absolute top-full left-0 w-full bg-gray-900 flex flex-col space-y-4 items-center p-6"
+              className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 flex flex-col space-y-4 items-center p-6 shadow-xl"
             >
               {[
                 { href: '/', label: 'Home' },
@@ -107,7 +128,7 @@ export default function Navbar() {
         </AnimatePresence>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex md:space-x-6 items-center">
+        <ul className="hidden md:flex md:space-x-2 items-center">
           {[
             { href: '/', label: 'Home' },
             { href: '/about', label: 'About' },
@@ -117,16 +138,13 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`relative text-lg ${
-                  isActive(link.href) ? 'text-blue-400' : 'hover:text-blue-400'
+                className={`relative text-base font-medium px-4 py-2 rounded-lg transition-all duration-300 ${
+                  isActive(link.href) 
+                    ? 'text-white bg-blue-600 shadow-lg shadow-blue-500/50' 
+                    : 'text-slate-300 hover:text-white hover:bg-slate-800'
                 }`}
               >
                 {link.label}
-                <span
-                  className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 ease-in-out ${
-                    isActive(link.href) ? 'w-full' : 'hover:w-full'
-                  }`}
-                ></span>
               </Link>
             </li>
           ))}
