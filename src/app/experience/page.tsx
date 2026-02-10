@@ -24,7 +24,7 @@ export default function Experience() {
         company: 'Associated Students Inc. at CSULB',
         logo: '/logos/asi-logo.jpeg',
         role: 'Software Developer',
-        duration: 'Aug 2025 - Present',
+        duration: 'Aug 2025 - Feb 2026',
         description: [
           'Replaced a $2,300/year third-party magazine host with an in-house viewer and uploads dashboard (React, Node.js, Cloudflare R2, MongoDB, CloudConvert API), cutting costs to $0 and serving thousands of users.',
           'Maintain and develop ASI web platforms for 40,000+ students with accessibility, reliability, and performance goals.',
