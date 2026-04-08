@@ -33,7 +33,7 @@ export default function Home() {
           <h1 className="text-3xl font-medium">Charles Milton</h1>
         </div>
         <p className="text-neutral-400 leading-relaxed text-lg">
-          Full-stack Software Engineer focused on web applications and scalable systems.
+          Full-Stack Software Engineer focused on web applications and scalable systems.
         </p>
       </header>
 
