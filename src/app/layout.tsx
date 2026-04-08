@@ -1,27 +1,36 @@
 import './globals.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Charles Milton - Software Engineer',
-  description: 'Incoming SDE at Amazon | CS Student at CSULB specializing in full-stack development, AI/ML, and scalable web applications',
-  keywords: ['Charles Milton', 'Software Engineer', 'Amazon SDE', 'CSULB', 'Full Stack Developer', 'Web Development', 'Machine Learning'],
-  authors: [{ name: 'Charles Milton' }],
+export const metadata: Metadata = {
+  title: 'Charles Milton | Software Engineer',
+  description: 'Software engineer at Amazon building web applications and scalable systems. Full-stack developer with experience in React, Node.js, AWS, and Python. CS graduate from CSULB.',
+  keywords: ['Charles Milton', 'Software Engineer', 'Amazon SDE', 'CSULB', 'Full Stack Developer', 'React', 'Node.js', 'AWS', 'Python'],
+  authors: [{ name: 'Charles Milton', url: 'https://chuckmilton.com' }],
   creator: 'Charles Milton',
-  icons: {
-    icon: '/favicons/favicon.ico',
-    apple: '/favicons/apple-touch-icon.png',
-    shortcut: '/favicons/favicon-32x32.png',
-    other: [
-      { rel: 'icon', url: '/favicons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { rel: 'icon', url: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-    ],
+  metadataBase: new URL('https://chuckmilton.com'),
+  alternates: {
+    canonical: '/',
   },
-  manifest: '/favicons/site.webmanifest',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: '/favicons/favicon.svg',
+    apple: '/favicons/favicon.svg',
+  },
   openGraph: {
     type: 'website',
-    title: 'Charles Milton - Software Engineer',
-    description: 'Incoming SDE at Amazon | Full-stack developer and CS student',
+    locale: 'en_US',
+    url: 'https://chuckmilton.com',
+    title: 'Charles Milton | Software Engineer',
+    description: 'Software engineer at Amazon building web applications and scalable systems.',
+    siteName: 'Charles Milton',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Charles Milton | Software Engineer',
+    description: 'Software engineer at Amazon building web applications and scalable systems.',
   },
 };
 
@@ -30,12 +39,37 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Charles Milton',
+    url: 'https://chuckmilton.com',
+    jobTitle: 'Software Development Engineer',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Amazon',
+    },
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'California State University, Long Beach',
+    },
+    sameAs: [
+      'https://github.com/chuckmilton',
+      'https://www.linkedin.com/in/charles-milton-cs',
+    ],
+  };
+
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="bg-slate-900 text-slate-50 antialiased">
-        <Navbar />
-        <main className="relative overflow-hidden">{children}</main>
-        <Footer />
+    <html lang="en">
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-neutral-800 focus:text-white focus:rounded">
+          Skip to main content
+        </a>
+        {children}
       </body>
     </html>
   );

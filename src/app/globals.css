@@ -1,69 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #0F172A;
-  --foreground: #F1F5F9;
-  --card-bg: #1E293B;
-  --card-hover: #334155;
-  --accent-primary: #3B82F6;
-  --accent-secondary: #06B6D4;
+  --bg: #0a0a0a;
+  --text: #e5e5e5;
+  --text-muted: #737373;
+  --accent: #a3a3a3;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-feature-settings: 'cv11', 'ss01';
-  font-variant-numeric: 'lining-nums';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1E293B;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #475569;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #64748B;
-}
-
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Focus styles for accessibility */
+body {
+  color: var(--text);
+  background: var(--bg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
 *:focus-visible {
-  outline: 2px solid #3B82F6;
+  outline: 1px solid var(--accent);
   outline-offset: 2px;
 }
 
-/* Gradient animation */
-@keyframes gradient {
-  0%, 100% {
-    background-size: 200% 200%;
-    background-position: left center;
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    background-size: 200% 200%;
-    background-position: right center;
+  to {
+    transform: rotate(360deg);
   }
 }
 
-.animate-gradient {
-  animation: gradient 3s ease infinite;
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow {
+    animation: none;
+  }
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
