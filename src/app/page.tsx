@@ -1,3 +1,5 @@
+import TerrariaPlaytime from './components/TerrariaPlaytime';
+
 export default function Home() {
   const experience = [
     { period: '2026 —', role: 'Software Development Engineer', company: 'Amazon', url: 'https://amazon.com', description: 'Incoming SDE in Seattle.' },
@@ -55,6 +57,9 @@ export default function Home() {
           </p>
           <p>
             Outside of work: guitar, climbing, working out.
+          </p>
+          <p>
+            <TerrariaPlaytime />
           </p>
         </div>
       </section>
