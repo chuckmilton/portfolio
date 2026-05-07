@@ -9,7 +9,7 @@ export default function Home() {
   ];
 
   const projects = [
-    { name: 'SharkPark', description: 'Real-time parking intelligence app for CSULB with occupancy forecasting and geofence-driven detection', url: null, code: null, wip: true },
+    { name: 'SharkPark', description: 'Real-time parking intelligence app for CSULB with occupancy forecasting and geofence-driven detection', url: 'https://sharkpark.app', code: null, wip: true },
     { name: 'TurnTalks', description: 'AI-powered discussion platform with real-time speech features', url: null, code: 'https://github.com/chuckmilton/turntalks' },
     { name: 'ACM Website', description: 'Official website for ACM at CSULB', url: 'https://acm-csulb.org', code: 'https://github.com/csulbacm/acm-website-2024' },
     { name: 'Rate My CSULB Professors', description: 'Chrome extension with 300+ active users', url: 'https://chromewebstore.google.com/detail/hfacilllhlfjdaakkmhmbdkidcibhoco', code: 'https://github.com/chuckmilton/Rate-My-CSULB-Professors' },
