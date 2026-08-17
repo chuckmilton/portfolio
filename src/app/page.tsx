@@ -122,9 +122,6 @@ export default function Home() {
                 ) : (
                   <span className="text-neutral-200">{project.name}</span>
                 )}
-                {project.wip && (
-                  <span className="text-neutral-500 text-sm">wip</span>
-                )}
                 {project.code && (
                   <a href={project.code} target="_blank" rel="noopener noreferrer" className="text-neutral-500 text-sm">
                     [code]
