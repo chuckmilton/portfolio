@@ -2,16 +2,16 @@ import TerrariaPlaytime from './components/TerrariaPlaytime';
 
 export default function Home() {
   const experience = [
-    { period: '2026 —', role: 'Software Development Engineer', company: 'Amazon', url: 'https://amazon.com', description: 'Incoming SDE in Seattle.' },
+    { period: '2026 —', role: 'Software Development Engineer', company: 'Amazon', url: 'https://amazon.com', description: 'Building and improving inventory systems at scale.' },
     { period: '2025 — 2026', role: 'Software Developer', company: 'Associated Students Inc.', url: 'https://www.asicsulb.org/corporate/', description: 'Built an in-house magazine platform replacing a $2,300/year service, now serving 40,000+ students.' },
     { period: '2025', role: 'Software Development Engineer Intern', company: 'Amazon', url: 'https://amazon.com', description: 'Built an AWS service to fix inventory misclassification, reducing cost data inaccuracies by 80% globally.' },
     { period: '2024', role: 'Software Engineer Intern', company: 'DreamWay Media', url: 'https://dreamwaymedia.com/', description: 'Refactored e-commerce apps boosting performance by 30% and containerized development for a 5-person team.' },
   ];
 
   const projects = [
-    { name: 'SharkPark', description: 'Real-time parking intelligence app for CSULB with occupancy forecasting and geofence-driven detection', url: 'https://sharkpark.app', code: null, wip: true },
+    { name: 'SharkPark', description: 'Real-time parking intelligence app for CSULB with occupancy forecasting and geofence-driven detection', url: 'https://sharkpark.app', code: 'https://github.com/SharkPark-App/SharkPark' },
     { name: 'TurnTalks', description: 'AI-powered discussion platform with real-time speech features', url: null, code: 'https://github.com/chuckmilton/turntalks' },
-    { name: 'ACM Website', description: 'Official website for ACM at CSULB', url: 'https://acm-csulb.org', code: 'https://github.com/csulbacm/acm-website-2024' },
+    { name: 'ACM Website', description: 'Official website for ACM at CSULB', url: 'https://csulb.acm.org/', code: 'https://github.com/csulbacm/acm-website-2024' },
     { name: 'Rate My CSULB Professors', description: 'Chrome extension with 300+ active users', url: 'https://chromewebstore.google.com/detail/hfacilllhlfjdaakkmhmbdkidcibhoco', code: 'https://github.com/chuckmilton/Rate-My-CSULB-Professors' },
     { name: 'CSULB Schedule Generator', description: 'Course scheduling tool with real-time class data', url: null, code: 'https://github.com/chuckmilton/CSULB-Schedule-Generator' },
     { name: 'LingoCub', description: 'Chrome extension for real-time YouTube video dubbing', url: 'https://www.youtube.com/watch?v=nJVbFMd9pfQ', code: 'https://github.com/chuckmilton/lingocub' },
